@@ -50,8 +50,8 @@ const categories = ['All', 'Web', 'AI', 'Apps'];
 const Projects = () => {
   const [filter, setFilter] = useState('All');
 
-  const filteredProjects = filter === 'All' 
-    ? projectsData 
+  const filteredProjects = filter === 'All'
+    ? projectsData
     : projectsData.filter(project => project.category === filter);
 
   return (
@@ -66,18 +66,17 @@ const Projects = () => {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-gradient">Projects</span></h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full opacity-50 mb-8" />
-          
+
           {/* Filter Tabs */}
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  filter === cat 
-                    ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/25' 
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat
+                    ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/25'
                     : 'glass text-slate-400 hover:text-white'
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -100,9 +99,9 @@ const Projects = () => {
                 {/* Image Container */}
                 <div className="relative h-60 overflow-hidden">
                   <div className="absolute inset-0 bg-darker/50 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 z-20">
@@ -118,10 +117,10 @@ const Projects = () => {
                   <p className="text-slate-400 text-sm mb-6 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="px-2 py-1 text-xs text-primary-400 bg-primary-500/10 rounded-md border border-primary-500/20"
                       >
@@ -131,13 +130,13 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <a 
+                    <a
                       href={project.liveUrl}
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white text-darker font-medium rounded-lg hover:bg-slate-200 transition-colors text-sm"
                     >
                       <ExternalLink size={16} /> Live Demo
                     </a>
-                    <a 
+                    <a
                       href={project.githubUrl}
                       className="flex items-center justify-center gap-2 px-4 py-2 glass text-white font-medium rounded-lg hover:bg-white/10 transition-colors text-sm"
                     >

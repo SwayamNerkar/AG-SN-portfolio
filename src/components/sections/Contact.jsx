@@ -26,7 +26,7 @@ const Contact = () => {
     //   to_email: 'your_email@example.com',
     //   message: form.message,
     // }, 'YOUR_PUBLIC_KEY')
-    
+
     // Simulating API call for demonstration
     setTimeout(() => {
       setLoading(false);
@@ -163,7 +163,7 @@ const Contact = () => {
               </button>
 
               {status === 'success' && (
-                <motion.p 
+                <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="text-emerald-400 text-center text-sm"

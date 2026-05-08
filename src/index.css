@@ -13,7 +13,12 @@
     @apply bg-[#020617] text-[#e2e8f0] font-sans antialiased overflow-x-hidden selection:bg-[#38bdf8] selection:text-[#020617];
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Syne', sans-serif;
   }
 }
@@ -30,7 +35,7 @@
   .text-accent {
     @apply text-[#38bdf8];
   }
-  
+
   .bg-accent {
     @apply bg-[#38bdf8] text-[#020617];
   }

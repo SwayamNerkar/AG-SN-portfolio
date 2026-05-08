@@ -35,7 +35,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <NavLink to="/" className="z-50 group">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="text-2xl font-black font-['Syne'] tracking-tighter uppercase flex items-center"

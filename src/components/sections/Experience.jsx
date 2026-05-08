@@ -66,9 +66,8 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative flex flex-col md:flex-row ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
+                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  }`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-[-8px] md:left-1/2 md:-translate-x-1/2 top-6 w-5 h-5 rounded-full bg-primary-500 ring-4 ring-darker z-10">
@@ -77,26 +76,22 @@ const Experience = () => {
 
                 {/* Content */}
                 <div className="ml-8 md:ml-0 md:w-1/2 pl-0 md:pl-12 md:pr-12 md:px-0">
-                  <div className={`glass-card p-6 rounded-2xl relative ${
-                    index % 2 === 0 ? 'md:text-left' : 'md:text-right'
-                  }`}>
-                    {/* Arrow */}
-                    <div className={`hidden md:block absolute top-6 w-4 h-4 bg-white/5 border-white/10 rotate-45 transform ${
-                      index % 2 === 0 ? '-left-2 border-l border-b' : '-right-2 border-r border-t'
-                    }`} />
-
-                    <div className={`flex items-center gap-2 mb-2 text-primary-400 ${
-                      index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                  <div className={`glass-card p-6 rounded-2xl relative ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'
                     }`}>
+                    {/* Arrow */}
+                    <div className={`hidden md:block absolute top-6 w-4 h-4 bg-white/5 border-white/10 rotate-45 transform ${index % 2 === 0 ? '-left-2 border-l border-b' : '-right-2 border-r border-t'
+                      }`} />
+
+                    <div className={`flex items-center gap-2 mb-2 text-primary-400 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                      }`}>
                       {exp.type === 'work' ? <Briefcase size={18} /> : <GraduationCap size={18} />}
                       <span className="font-medium">{exp.role}</span>
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-1">{exp.company}</h3>
-                    
-                    <div className={`flex items-center gap-2 text-slate-500 text-sm mb-4 ${
-                      index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
-                    }`}>
+
+                    <div className={`flex items-center gap-2 text-slate-500 text-sm mb-4 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                      }`}>
                       <Calendar size={14} />
                       <span>{exp.date}</span>
                     </div>

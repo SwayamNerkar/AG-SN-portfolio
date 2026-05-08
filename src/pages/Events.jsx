@@ -63,13 +63,13 @@ const Events = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group relative overflow-hidden bg-[#0a0a0a] border border-[#1f1f1f] rounded-sm cursor-pointer aspect-video"
             >
-              <img 
-                src={event.img} 
+              <img
+                src={event.img}
                 alt={event.title}
                 className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-opacity duration-500 grayscale group-hover:grayscale-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80" />
-              
+
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <span className="px-3 py-1 bg-[#38bdf8] text-[#020617] font-bold uppercase text-xs tracking-widest">
@@ -79,7 +79,7 @@ const Events = () => {
                     {event.date}
                   </span>
                 </div>
-                
+
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
                     {event.title}

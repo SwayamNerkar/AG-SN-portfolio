@@ -51,19 +51,19 @@ const Experience = () => {
               className="group border-b border-[#1f1f1f] py-12 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[#0a0a0a] transform scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-500 ease-[0.22,1,0.36,1] -z-10" />
-              
+
               <div className="grid md:grid-cols-12 gap-8 items-start relative z-10">
                 <div className="md:col-span-3">
                   <span className="text-[#333] font-black text-6xl leading-none group-hover:text-[#ccff00] transition-colors duration-500">
                     {exp.id}
                   </span>
                 </div>
-                
+
                 <div className="md:col-span-5">
                   <h3 className="text-3xl font-bold text-white mb-2">{exp.role}</h3>
                   <p className="text-xl text-[#888] font-medium">{exp.company}</p>
                 </div>
-                
+
                 <div className="md:col-span-4 flex flex-col justify-between h-full">
                   <p className="text-[#ccff00] font-bold tracking-widest uppercase text-sm mb-4">
                     {exp.date}

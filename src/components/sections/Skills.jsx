@@ -60,7 +60,7 @@ const Skills = () => {
                 <div className="w-2 h-2 rounded-full bg-primary-400" />
                 {skillGroup.category}
               </h3>
-              
+
               <div className="space-y-6">
                 {skillGroup.items.map((skill, idx) => (
                   <div key={idx}>

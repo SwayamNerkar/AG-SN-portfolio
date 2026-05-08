@@ -18,23 +18,23 @@ const About = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-12 gap-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-5"
           >
             <div className="aspect-[4/5] bg-[#111] rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 border border-[#222]">
-              <img 
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fit=crop&w=800&h=1000" 
-                alt="Portrait" 
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fit=crop&w=800&h=1000"
+                alt="Portrait"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-[#ccff00] mix-blend-multiply opacity-20" />
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -43,7 +43,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
               I Engineer Digital Experiences That Are Built to Last.
             </h2>
-            
+
             <div className="space-y-6 text-[#a0a0a0] text-lg leading-relaxed font-medium">
               <p>
                 As a software engineer, I view coding not just as typing commands, but as digital architecture. Every line of code is a structural element meant to support a robust, scalable, and visually compelling product.

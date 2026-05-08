@@ -66,8 +66,8 @@ const Projects = () => {
               </div>
               <div className="w-full aspect-[16/7] md:aspect-[21/9] overflow-hidden rounded-sm bg-[#111] relative">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                <img 
-                  src={project.img} 
+                <img
+                  src={project.img}
                   alt={project.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transform group-hover:scale-105 transition-all duration-700 ease-[0.22,1,0.36,1]"
                 />

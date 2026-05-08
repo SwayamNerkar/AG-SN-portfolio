@@ -64,7 +64,7 @@ function App() {
               className="fixed inset-0 z-[100] flex items-center justify-center bg-[#ccff00] text-black"
             >
               <div className="overflow-hidden">
-                <motion.h1 
+                <motion.h1
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ delay: 0.2, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
