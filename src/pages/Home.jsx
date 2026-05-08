@@ -37,11 +37,6 @@ const Home = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl flex flex-col items-center"
         >
-          <p className="text-[#94a3b8] font-semibold tracking-[0.2em] uppercase mb-8 text-sm flex items-center gap-4">
-            <span className="w-12 h-px bg-[#38bdf8]"></span>
-            Creative Professional
-            <span className="w-12 h-px bg-[#38bdf8]"></span>
-          </p>
 
           <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-black leading-[1.1] uppercase tracking-tighter mb-4">
             Building Digital

@@ -14,10 +14,11 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm font-bold uppercase tracking-widest text-[#666]">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
-            <a href="#" className="hover:text-white transition-colors">Dribbble</a>
+            <a href="https://x.com/SwayamNerkar" className="hover:text-white transition-colors">Twitter</a>
+            <a href="https://www.linkedin.com/in/swayam-nerkar-79043322b" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com/Swayamnerkar" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.instagram.com/trade.swayam.dev/" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://www.instagram.com/optiondecoders" className="hover:text-white transition-colors">optiondecoders</a>
           </div>
         </div>
 
@@ -26,7 +27,7 @@ const Footer = () => {
             &copy; {currentYear} SN.DEV. ALL RIGHTS RESERVED.
           </p>
           <p className="text-[#555] text-xs font-bold tracking-widest uppercase">
-            ENGINEERED IN SAN FRANCISCO
+            ENGINEERED IN NAGPUR,MAHARASHTRA,INDIA.
           </p>
         </div>
       </div>
