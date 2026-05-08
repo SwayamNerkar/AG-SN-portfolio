@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillsData = [
-  { group: 'Core', items: ['React', 'TypeScript', 'Next.js', 'Node.js'] },
-  { group: 'Architecture', items: ['Micro-frontends', 'GraphQL', 'Redux', 'System Design'] },
+  { group: 'Programming', items: ['React', 'TypeScript', 'Next.js', 'Node.js'] },
+  { group: 'Architecture', items: ['Api & mcp', 'GraphQL', 'Redux', 'System Design'] },
   { group: 'Styling', items: ['Tailwind CSS', 'Framer Motion', 'SASS', 'WebGL / Three.js'] },
-  { group: 'Ops & Cloud', items: ['Docker', 'AWS', 'CI/CD Pipelines', 'Vercel'] }
+  { group: 'Ops & Cloud', items: ['Docker', 'AWS', 'CI/CD Pipelines', 'Vercel'] },
+  { group: 'AI & data', items: ['ML & DL models', 'Data Visualization', 'AI-Based Automation'] },
+  { group: 'FinTech', items: ['Trading APIs', 'Strategy Backtesting', 'Risk Management', 'Market Analysis'] },
+  { group: 'Tools', items: ['Git/github', 'Figma', 'Canva', 'Firebase', 'Vercel', 'Netlify', 'Postman', 'Google Colab', 'Jupyter Notebook', 'Android Studio', 'Streamlit'] },
 ];
 
 const Skills = () => {
@@ -36,11 +39,11 @@ const Skills = () => {
                 <span className="w-8 h-px bg-[#38bdf8]"></span>
                 {category.group}
               </h3>
-              
+
               <div className="flex flex-col border-t border-[#1e293b]">
                 {category.items.map((skill, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     whileHover={{ x: 10 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="flex justify-between items-center py-5 border-b border-[#1e293b] group cursor-pointer"

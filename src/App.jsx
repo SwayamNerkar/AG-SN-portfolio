@@ -12,6 +12,7 @@ import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Events from './pages/Events';
+import Achievements from './pages/Achievements';
 import Contact from './pages/Contact';
 
 const PageTransition = ({ children }) => {
@@ -85,6 +86,7 @@ function App() {
                   <Route path="/experience" element={<PageTransition><Experience /></PageTransition>} />
                   <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
                   <Route path="/events" element={<PageTransition><Events /></PageTransition>} />
+                  <Route path="/achievements" element={<PageTransition><Achievements /></PageTransition>} />
                   <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
                 </Routes>
               </main>

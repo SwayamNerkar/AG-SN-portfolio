@@ -44,18 +44,20 @@ const Contact = () => {
                 <p className="text-[#666] uppercase tracking-widest text-sm font-bold mb-2">Direct Mail</p>
                 <motion.a
                   whileHover={{ x: 5 }}
-                  href="mailto:hello@sn.dev"
+                  href="mailto:[Swayamnerkar16@gmail.com]"
                   className="text-2xl md:text-3xl font-bold hover:text-[#38bdf8] transition-colors inline-block"
                 >
-                  hello@sn.dev
+                  Swayamnerkar16@gmail.com
                 </motion.a>
               </div>
               <div>
                 <p className="text-[#666] uppercase tracking-widest text-sm font-bold mb-2">Socials</p>
                 <div className="flex gap-6 text-xl font-bold">
-                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="#" className="transition-colors">Twitter</motion.a>
-                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="#" className="transition-colors">LinkedIn</motion.a>
-                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="#" className="transition-colors">Github</motion.a>
+                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="https://x.com/SwayamNerkar" className="transition-colors">Twitter</motion.a>
+                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="https://www.linkedin.com/in/swayam-nerkar-79043322b" className="transition-colors">LinkedIn</motion.a>
+                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="https://github.com/Swayamnerkar" className="transition-colors">Github</motion.a>
+                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="https://www.instagram.com/trade.swayam.dev/" className="transition-colors">Instagram</motion.a>
+                  <motion.a whileHover={{ y: -5, color: '#38bdf8' }} href="https://www.instagram.com/optiondecoders" className="transition-colors">OptionDecoders</motion.a>
                 </div>
               </div>
             </div>
