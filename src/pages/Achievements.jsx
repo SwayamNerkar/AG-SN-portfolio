@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Award, BookOpen } from 'lucide-react';
 import shardeumGcoen from '../assets/shardeum gcoen.png';
+import googleCloud from '../assets/google cloud.png';
+import iaisSummit from '../assets/IAIS3.png';
+import googleArcade from '../assets/goole comunity.png';
+import edujourneyAzure from '../assets/edujourney azure.png';
+import axis24 from "../assets/axis'24.png";
 
 const achievements = [
   {
@@ -80,6 +85,61 @@ const achievements = [
     desc: 'Authored technical articles and creative content for "The Writers\' Lounge". Focused on simplifying complex tech concepts, improving SEO, and engaging readers through high-quality professional writing.',
     link: 'https://www.linkedin.com/in/swayam-nerkar-79043322b',
     linkText: 'Read My Blogs'
+  },
+  {
+    id: 8,
+    title: 'Google Cloud & Qwiklabs Learning Program – Participant',
+    category: 'Certification & Learning',
+    date: '2025',
+    img: googleCloud,
+    icon: <BookOpen className="text-accent" size={24} />,
+    desc: 'Participated in a cloud learning program organized by Google Cloud Community India and DevRhylme Pvt. Ltd., gaining hands-on exposure to Google Cloud technologies and cloud infrastructure fundamentals.\n\nExplored the Google Cloud learning ecosystem through Qwiklabs, focusing on cloud labs, project environments, IAM roles, APIs, and Google Cloud services. The program enhanced practical understanding of cloud computing workflows and modern infrastructure management.\n\nKey Learnings:\n• Worked with Google Cloud lab environments and Qwiklabs\n• Learned Google Cloud Console navigation and project management\n• Explored Cloud IAM roles and access control concepts\n• Gained insights into APIs, cloud services, AI, and Machine Learning',
+    link: '#',
+    linkText: 'View Details'
+  },
+  {
+    id: 9,
+    title: 'IAIS 2024 International AI Summit – Volunteer',
+    category: 'Leadership & Volunteering',
+    date: '2024',
+    img: iaisSummit,
+    icon: <Award className="text-accent" size={24} />,
+    desc: 'Successfully volunteered at the IAIS 2024 International AI Summit #3, conducted on 30–31 August 2024 at GHRCEMN. The summit was technically sponsored by IEEE Bombay Section and IEEE Student Branch GHRCEM.\n\nThe event brought together AI researchers, industry experts, academicians, and students from across the globe to discuss the latest advancements in Artificial Intelligence through keynote sessions, technical discussions, and workshops.\n\nHad the opportunity to gain insights from experts including Jibu Elias, Akash James, and Nivash Jeevanandam. Special thanks to Dr. Smita Nirkhi Singh, Dr. Vivek Kapur, and Tabassum H Khan for their guidance and support.',
+    link: '#',
+    linkText: 'View Details'
+  },
+  {
+    id: 10,
+    title: 'Google Arcade Games & Qwiklabs Challenges – Achievement',
+    category: 'Certification & Learning',
+    date: '2025',
+    img: googleArcade,
+    icon: <BookOpen className="text-accent" size={24} />,
+    desc: 'Successfully completed the Google Arcade Games learning challenges through Qwiklabs, earning multiple badges, certifications, and credentials by completing hands-on labs, trivia rounds, and skill-based challenges.\n\nThe program strengthened practical knowledge in cloud technologies, problem-solving, and developer tools through interactive learning experiences and real-world tasks.\n\nAlso received official swags and recognition for successfully completing all challenge levels and achievements.',
+    link: '#',
+    linkText: 'View Details'
+  },
+  {
+    id: 11,
+    title: 'Azure AI Fundamentals Cloud Course – Certification',
+    category: 'Certification & Learning',
+    date: '2025',
+    img: edujourneyAzure,
+    icon: <BookOpen className="text-accent" size={24} />,
+    desc: 'Successfully completed the Azure AI Fundamentals Cloud Course from EduJourney.in, presented by Swaraj A Deshmukh.\n\nThe course provided hands-on exposure to core Artificial Intelligence concepts and practical implementation using Microsoft Azure AI services and cloud technologies.\n\nKey Learnings:\n• Machine Learning using Azure Machine Learning Studio\n• Natural Language Processing (NLP) and Text Analytics\n• Computer Vision with Azure Vision services\n• Conversational AI using Azure Bot Service and QnA Maker',
+    link: '#',
+    linkText: 'View Details'
+  },
+  {
+    id: 12,
+    title: 'AXIS ’24 Campus Ambassador – Certification of Excellence',
+    category: 'Leadership & Volunteering',
+    date: '2024',
+    img: axis24,
+    icon: <Award className="text-accent" size={24} />,
+    desc: 'Awarded a distinguished Certificate of Excellence for outstanding contributions and leadership in the Campus Ambassador Program for AXIS ’24, the national-level techno-management festival of VNIT Nagpur.\n\nRepresented the festival on campus, drove student participation, and successfully coordinated promotional campaigns, showing high commitment, leadership, and marketing skills.',
+    link: '#',
+    linkText: 'View Details'
   }
 ];
 
