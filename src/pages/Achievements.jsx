@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Award, BookOpen } from 'lucide-react';
+import shardeumGcoen from '../assets/shardeum gcoen.png';
 
 const achievements = [
   {
@@ -52,7 +53,7 @@ const achievements = [
     title: 'Shardeum Mini Hackathon Participant',
     category: 'Hackathon',
     date: '2024',
-    img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500&q=80',
+    img: shardeumGcoen,
     icon: <Award className="text-accent" size={24} />,
     desc: 'Participated in the Shardeum Mini Hackathon at Government College of Engineering, Nagpur. Collaborated on innovative technical problem-solving and blockchain-oriented development concepts within the Shardeum ecosystem.',
     link: 'https://github.com/SwayamNerkar',
