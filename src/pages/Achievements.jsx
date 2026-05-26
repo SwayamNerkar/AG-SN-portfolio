@@ -7,6 +7,12 @@ import iaisSummit from '../assets/IAIS3.png';
 import googleArcade from '../assets/goole comunity.png';
 import edujourneyAzure from '../assets/edujourney azure.png';
 import axis24 from "../assets/axis'24.png";
+import sahyadriRatna from '../assets/syadri ratna pune .png';
+import optionDecoders from '../assets/Option decoders.png';
+import build4Change from '../assets/B4C.png';
+import cloudComputing from '../assets/CC.png';
+import bizNdim from '../assets/biz NDIM.png';
+import internRiya from '../assets/intern riya.B.png';
 
 const achievements = [
   {
@@ -14,7 +20,7 @@ const achievements = [
     title: 'Sahyadri Ratna Puraskar 2025',
     category: 'Notable Award',
     date: '2025',
-    img: 'https://picsum.photos/id/104/800/500',
+    img: sahyadriRatna,
     icon: <Award className="text-accent" size={24} />,
     desc: 'Recipient of the prestigious Sahyadri Ratna Puraskar 2025, awarded in recognition of outstanding achievements, technical excellence, and contributions in the fields of technology, innovation, and academic development.',
     link: 'https://www.linkedin.com/sharing/share-offsite/?url=https://example.com/sahyadri-ratna-2025',
@@ -25,7 +31,8 @@ const achievements = [
     title: 'Published Author – “Option Decoders”',
     category: 'Publication',
     date: '2024',
-    img: 'https://picsum.photos/id/20/800/500',
+    img: optionDecoders,
+    imgClass: 'object-contain py-4',
     icon: <BookOpen className="text-accent" size={24} />,
     desc: 'Authored the book "Option Decoders", focused on simplifying concepts of options trading, derivatives, and market psychology for beginners and aspiring traders. The book is published and available on major platforms including Amazon and Google Books, reflecting strong analytical, financial, and educational expertise.',
     link: 'https://www.amazon.com',
@@ -36,7 +43,7 @@ const achievements = [
     title: '2nd Runner-Up – Build4Change Hackathon',
     category: 'Hackathon Award',
     date: 'Aug 22, 2024',
-    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&h=500&q=80',
+    img: build4Change,
     icon: <Award className="text-accent" size={24} />,
     desc: 'Secured 2nd Runner-Up position with Team "Stack Overfloor" at Anjuman College of Engineering & Technology, Nagpur. Developed an innovative AI-based anomaly detection system for medical imaging.',
     link: 'https://github.com/SwayamNerkar',
@@ -47,7 +54,7 @@ const achievements = [
     title: 'Cloud Computing Seminar Organization',
     category: 'Leadership',
     date: '2025',
-    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500&q=80',
+    img: cloudComputing,
     icon: <ExternalLink className="text-accent" size={24} />,
     desc: 'Actively contributed to organizing the technical seminar: "Jumpstart Your Tech Career: Master Cloud Computing Fundamentals with AWS, Azure & GCP". Handled event coordination, technical session management, and student engagement activities.',
     link: 'https://www.linkedin.com/in/swayam-nerkar-79043322b',
@@ -69,7 +76,7 @@ const achievements = [
     title: 'Biz Tech Ideathon 2025',
     category: 'Innovation',
     date: '2025',
-    img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500&q=80',
+    img: bizNdim,
     icon: <Award className="text-accent" size={24} />,
     desc: 'Participated in Biz Tech Ideathon 2025, focusing on entrepreneurship, business innovation, and technology-driven solution building. Developed and pitched innovative tech-business models.',
     link: 'https://www.linkedin.com/in/swayam-nerkar-79043322b',
@@ -80,7 +87,8 @@ const achievements = [
     title: 'Technical Blog Writing – “The Writers’ Lounge”',
     category: 'Writing / Content',
     date: '2024 - 2025',
-    img: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&h=500&q=80',
+    img: internRiya,
+    imgClass: 'object-contain py-4',
     icon: <BookOpen className="text-accent" size={24} />,
     desc: 'Authored technical articles and creative content for "The Writers\' Lounge". Focused on simplifying complex tech concepts, improving SEO, and engaging readers through high-quality professional writing.',
     link: 'https://www.linkedin.com/in/swayam-nerkar-79043322b',
@@ -180,7 +188,7 @@ const Achievements = () => {
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-full object-cover opacity-30 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0"
+                className={`w-full h-full opacity-30 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0 ${item.imgClass || 'object-cover'}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90" />
 
@@ -232,7 +240,7 @@ const Achievements = () => {
                     <img
                       src={selectedAchievement.img}
                       alt="Achievement Preview"
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full ${selectedAchievement.imgClass || 'object-cover'}`}
                     />
                   </div>
 
