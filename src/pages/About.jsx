@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import portraitImg from '../assets/WhatsApp Image 2026-02-04 at 9.55.24 PM.jpeg';
+import portraitImg from '../assets/iaqsa stand.jpeg';
 
 const About = () => {
   return (

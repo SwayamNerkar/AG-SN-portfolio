@@ -32,8 +32,20 @@ import mlsaEvent from '../assets/robot.png';
 import techotsavEvent from '../assets/tech gdsc.png';
 import axis24 from "../assets/axis'24.png";
 import makxeniaWorkshop from '../assets/makxenia.png';
+import wwdcParty from '../assets/wwdc party photos.jpg';
 
 const events = [
+  {
+    id: 1,
+    title: 'WWDC26 Watch Party – Swift Nagpur Community',
+    type: 'Community Event',
+    date: 'June 2026',
+    img: wwdcParty,
+    desc: "Watching Apple's biggest annual announcements alongside an enthusiastic community of developers and tech enthusiasts was an inspiring experience. From discussions about AI and the Apple ecosystem to networking with talented individuals, the event provided valuable insights and meaningful connections.\n\nOne of the highlights was interacting with people who share the same passion for technology, innovation, and continuous learning. These conversations often become the starting point for new ideas, collaborations, and opportunities.\n\nA big thank you to Vedang Kulkarni and the entire Swift Nagpur team for making this event possible and bringing the developer community together.\n\nExcited to keep learning, building, and exploring what's next in the world of technology.",
+    subtitle: 'Swift Nagpur · Nagpur, Maharashtra',
+    link: '#',
+    linkText: 'View Details'
+  },
   {
     id: 5,
     title: 'IEEE WIE Webinar – Student Coordinator',
