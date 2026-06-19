@@ -29,7 +29,12 @@ const fadeUp = {
 
 const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
+  const [autoScrollProgress, setAutoScrollProgress] = useState(0);
+  const [hasAutoScrolled, setHasAutoScrolled] = useState(false);
   const containerRef = useRef(null);
+  const section2Ref = useRef(null);
+  const autoScrollTimerRef = useRef(null);
+  const progressIntervalRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -45,6 +50,44 @@ const Home = () => {
       setCurrentRole(p => (p + 1) % roles.length);
     }, 3000);
     return () => clearInterval(id);
+  }, []);
+
+  // Auto-scroll to Section 2 after 5 seconds
+  useEffect(() => {
+    const DURATION = 5000; // 5 seconds
+    const TICK = 50;       // update every 50ms
+    let elapsed = 0;
+
+    progressIntervalRef.current = setInterval(() => {
+      elapsed += TICK;
+      setAutoScrollProgress(Math.min(elapsed / DURATION, 1));
+    }, TICK);
+
+    autoScrollTimerRef.current = setTimeout(() => {
+      if (!hasAutoScrolled && section2Ref.current) {
+        section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+        setHasAutoScrolled(true);
+        clearInterval(progressIntervalRef.current);
+      }
+    }, DURATION);
+
+    // Cancel auto-scroll if user manually scrolls
+    const cancelOnScroll = () => {
+      if (window.scrollY > 10) {
+        clearTimeout(autoScrollTimerRef.current);
+        clearInterval(progressIntervalRef.current);
+        setHasAutoScrolled(true);
+        setAutoScrollProgress(1);
+        window.removeEventListener('scroll', cancelOnScroll);
+      }
+    };
+    window.addEventListener('scroll', cancelOnScroll, { passive: true });
+
+    return () => {
+      clearTimeout(autoScrollTimerRef.current);
+      clearInterval(progressIntervalRef.current);
+      window.removeEventListener('scroll', cancelOnScroll);
+    };
   }, []);
 
   return (
@@ -104,43 +147,76 @@ const Home = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 flex flex-col items-center gap-5 text-center px-6"
         >
-          {/* Pill badge */}
-          <span
-            className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-cyan-400 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/20 backdrop-blur-sm"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            Portfolio · 2026
-          </span>
 
-          <p
-            className="text-slate-400 text-sm md:text-base font-medium tracking-[0.35em] uppercase max-w-sm"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            Engineering · Design · Intelligence
-          </p>
+
+
         </motion.div>
 
-        {/* Scroll cue */}
+        {/* Scroll cue with countdown ring */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
+          onClick={() => {
+            if (section2Ref.current) {
+              section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+              setHasAutoScrolled(true);
+              clearTimeout(autoScrollTimerRef.current);
+              clearInterval(progressIntervalRef.current);
+            }
+          }}
+          title="Click to scroll down"
         >
           <span className="text-slate-600 text-[10px] font-medium uppercase tracking-[0.25em]">
             scroll
           </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-          >
-            <ChevronDown size={18} className="text-slate-500" />
-          </motion.div>
+
+          {/* SVG countdown ring */}
+          <div className="relative w-9 h-9 flex items-center justify-center">
+            <svg
+              className="absolute inset-0 w-full h-full -rotate-90"
+              viewBox="0 0 36 36"
+            >
+              {/* Track */}
+              <circle
+                cx="18" cy="18" r="15"
+                fill="none"
+                stroke="rgba(148,163,184,0.15)"
+                strokeWidth="2"
+              />
+              {/* Progress arc */}
+              <circle
+                cx="18" cy="18" r="15"
+                fill="none"
+                stroke="url(#scrollRingGrad)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeDasharray={`${2 * Math.PI * 15}`}
+                strokeDashoffset={`${2 * Math.PI * 15 * (1 - autoScrollProgress)}`}
+                style={{ transition: 'stroke-dashoffset 0.05s linear' }}
+              />
+              <defs>
+                <linearGradient id="scrollRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#22d3ee" />
+                  <stop offset="100%" stopColor="#3b82f6" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {/* Bouncing chevron inside ring */}
+            <motion.div
+              animate={{ y: [0, 4, 0] }}
+              transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+            >
+              <ChevronDown size={14} className="text-slate-400" />
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 
       {/* ─── SECTION 2 — Revealed identity card ───────────────────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden">
+      <section ref={section2Ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden">
 
         {/* Blurred background continuation (matching image blur from above) */}
         <div className="absolute inset-0 bg-slate-950" />
