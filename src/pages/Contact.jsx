@@ -142,7 +142,7 @@ const Contact = () => {
                   type="text"
                   name="from_name"
                   required
-                  value={fields.name}
+                  value={fields.from_name}
                   onChange={handleChange}
                   className={inputClass}
                   placeholder="Enter your name"
