@@ -200,7 +200,7 @@ const Achievements = () => {
               <img
                 src={item.img}
                 alt={item.title}
-                className={`w-full h-full opacity-30 group-hover:opacity-60 transition-opacity duration-500 grayscale group-hover:grayscale-0 ${item.imgClass || 'object-cover'}`}
+                className={`w-full h-full opacity-30 group-hover:opacity-60 transition-opacity duration-500 ${item.imgClass || 'object-cover'}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90" />
 

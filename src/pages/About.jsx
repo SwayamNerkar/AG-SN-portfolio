@@ -25,7 +25,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-5"
           >
-            <div className="aspect-[4/5] bg-[#111] rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700 border border-[#222]">
+            <div className="aspect-[4/5] bg-[#111] rounded-sm overflow-hidden relative transition-all duration-700 border border-[#222]">
               <img
                 src={portraitImg}
                 alt="Portrait"

@@ -439,7 +439,7 @@ const Events = () => {
               <img
                 src={event.img}
                 alt={event.title}
-                className={`w-full h-full ${event.imgFit || 'object-cover'} opacity-40 group-hover:opacity-80 transition-opacity duration-500 grayscale group-hover:grayscale-0`}
+                className={`w-full h-full ${event.imgFit || 'object-cover'} opacity-40 group-hover:opacity-80 transition-opacity duration-500`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80" />
 
