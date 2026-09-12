@@ -33,8 +33,20 @@ import techotsavEvent from '../assets/tech gdsc.png';
 import axis24 from "../assets/axis'24.png";
 import makxeniaWorkshop from '../assets/makxenia.png';
 import wwdcParty from '../assets/wwdc party photos.jpg';
+import unityWorkshop from '../assets/1789098390166.jpg';
 
 const events = [
+  {
+    id: 36,
+    title: 'Hands-On Unity Game Development Workshop – Instructor',
+    type: 'Workshop',
+    date: '04 September 2026',
+    img: unityWorkshop,
+    desc: 'Conducted a comprehensive 5-hour hands-on Unity Game Development Workshop at Priyadarshini College of Engineering, Nagpur. Taught students the fundamentals of Game Development and guided them in building their very own Endless Cube Runner game from scratch.\n\nThe session saw incredible energy, enthusiasm, and curiosity from the students, resulting in a 5/5 feedback rating. A special milestone as a technical educator, made memorable by the HOD appreciating my journey and displaying my book, "Game On: Unity Edition".\n\nOrganized with support from Dr. Nitesh Ghodichor and conducted alongside team members Prajwal Ghagre, Swayam Nerkar, and Parth Neralwar.',
+    subtitle: 'Priyadarshini College of Engineering (PCE), Nagpur',
+    link: '#',
+    linkText: 'View Details'
+  },
   {
     id: 1,
     title: 'WWDC26 Watch Party – Swift Nagpur Community',

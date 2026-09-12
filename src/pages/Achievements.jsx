@@ -13,8 +13,20 @@ import build4Change from '../assets/B4C.png';
 import cloudComputing from '../assets/CC.png';
 import bizNdim from '../assets/biz NDIM.png';
 import internRiya from '../assets/intern riya.B.png';
+import unityWorkshop from '../assets/1789098390166.jpg';
 
 const achievements = [
+  {
+    id: 13,
+    title: 'Conducted Unity Game Development Workshop',
+    category: 'Workshop Instructor & Educator',
+    date: '04 September 2026',
+    img: unityWorkshop,
+    icon: <BookOpen className="text-accent" size={24} />,
+    desc: 'Conducted a 5-hour hands-on Unity Game Development Workshop at Priyadarshini College of Engineering, Nagpur. Guided students to build their very own Endless Cube Runner game from scratch.\n\nReceived an overwhelming response and excellent 5/5 feedback. A highlight was the HOD appreciating my journey and displaying my book, "Game On: Unity Edition". Grateful to Dr. Nitesh Ghodichor Sir for the opportunity. Co-conducted with team members Prajwal Ghagre, Swayam Nerkar, and Parth Neralwar.',
+    link: '#',
+    linkText: 'View Details'
+  },
   {
     id: 1,
     title: 'Sahyadri Ratna Puraskar 2025',

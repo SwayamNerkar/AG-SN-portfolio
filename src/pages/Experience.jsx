@@ -20,6 +20,15 @@ const experiences = [
     location: 'Nagpur, India',
     date: 'Jan 2024 - Present',
     desc: 'Managing a diversified portfolio across F&O, Equity, and Mutual Funds with a focus on technical analysis and risk management. Simultaneously providing freelance services in AIML and modern web development.'
+  },
+  {
+    id: '03',
+    role: 'Software Developer Intern',
+    company: 'Rural Games',
+    location: 'Uttar Pradesh, India (Remote)',
+    date: 'Jul 2026 - Aug 2026',
+    desc: 'Worked on full‑stack web projects, contributed to game‑related tools, and collaborated with the remote team to deliver features. Gained experience in React, Node.js, and CI/CD pipelines.',
+    // No certificate image available yet
   }
 ];
 
