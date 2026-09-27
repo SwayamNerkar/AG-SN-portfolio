@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const licences = [
   {
@@ -151,6 +152,7 @@ const Licences = () => {
           </motion.div>
         ))}
       </div>
+    <ContentPlaceholder />
     </div>
   );
 };

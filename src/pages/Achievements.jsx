@@ -14,6 +14,7 @@ import cloudComputing from '../assets/CC.png';
 import bizNdim from '../assets/biz NDIM.png';
 import internRiya from '../assets/intern riya.B.png';
 import unityWorkshop from '../assets/1789098390166.jpg';
+import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const achievements = [
   {
@@ -285,7 +286,8 @@ const Achievements = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      <ContentPlaceholder />
+    </div>
     </section>
   );
 };

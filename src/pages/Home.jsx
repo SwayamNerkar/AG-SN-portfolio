@@ -7,6 +7,7 @@ import img1 from '../assets/conference.jpeg';
 import img3 from '../assets/iaqsa stand.jpeg';
 import img4 from '../assets/icaqsa.jpeg';
 import img5 from '../assets/iim outdoor.jpeg';
+import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const roles = [
   "UI/UX Developer",
@@ -91,7 +92,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative bg-slate-950 overflow-x-hidden">
+    <div ref={containerRef} className="relative bg-transparent overflow-x-hidden">
 
       {/* ─── SECTION 1 — Full-screen visual cover ─────────────────────────── */}
       <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -147,8 +148,6 @@ const Home = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 flex flex-col items-center gap-5 text-center px-6"
         >
-
-
 
         </motion.div>
 
@@ -219,7 +218,7 @@ const Home = () => {
       <section ref={section2Ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden">
 
         {/* Blurred background continuation (matching image blur from above) */}
-        <div className="absolute inset-0 bg-slate-950" />
+        <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-md" />
         {/* Top continuation from section 1 */}
         <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-slate-950 to-transparent" />
 
@@ -230,6 +229,73 @@ const Home = () => {
             background: 'radial-gradient(circle, rgba(6,182,212,0.08) 0%, rgba(59,130,246,0.05) 50%, transparent 70%)'
           }}
         />
+
+        {/* Floating Achievement Bubbles (Left & Right) */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute top-[10%] md:top-[25%] left-[-5%] md:left-[5%] lg:left-[10%] z-20 flex flex-col items-center pointer-events-none scale-[0.65] md:scale-100"
+        >
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="flex items-center gap-3 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 px-5 py-3 rounded-full shadow-2xl shadow-cyan-500/10"
+          >
+            <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center text-xl">
+              🏆
+            </div>
+            <div className="text-left">
+              <p className="text-white font-bold text-sm">33+ Events</p>
+              <p className="text-slate-400 text-xs">Attended & Organized</p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="absolute top-[20%] md:top-[40%] right-[-5%] md:right-[5%] lg:right-[10%] z-20 flex flex-col items-center pointer-events-none scale-[0.65] md:scale-100"
+        >
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="flex items-center gap-3 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 px-5 py-3 rounded-full shadow-2xl shadow-blue-500/10"
+          >
+            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-xl">
+              🚀
+            </div>
+            <div className="text-left">
+              <p className="text-white font-bold text-sm">Hackathons</p>
+              <p className="text-slate-400 text-xs">Multiple Wins</p>
+            </div>
+          </motion.div>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="absolute bottom-[10%] md:bottom-[25%] left-[-5%] md:left-[15%] lg:left-[20%] z-20 hidden sm:flex flex-col items-center pointer-events-none scale-[0.65] md:scale-100"
+        >
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="flex items-center gap-3 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 px-4 py-2 rounded-full shadow-2xl shadow-sky-500/10"
+          >
+            <div className="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center text-lg">
+              🌟
+            </div>
+            <div className="text-left">
+              <p className="text-white font-bold text-sm">Community</p>
+              <p className="text-slate-400 text-xs">Leader</p>
+            </div>
+          </motion.div>
+        </motion.div>
 
         {/* Content */}
         <motion.div
@@ -346,8 +412,8 @@ const Home = () => {
 
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
               <a
-                href="Swayam nerkar 2026 resume.docx"
-                download
+                href="/Swayam_Nerkar_Resume.pdf"
+                download="Swayam_Nerkar_Resume.pdf"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg font-semibold text-sm uppercase tracking-wider text-slate-300 border border-slate-700 hover:border-cyan-500/60 hover:text-white transition-all duration-300"
                 style={{ fontFamily: 'Inter, sans-serif', background: 'rgba(15,23,42,0.6)' }}
               >
@@ -378,6 +444,7 @@ const Home = () => {
         </motion.div>
       </section>
 
+    <ContentPlaceholder />
     </div>
   );
 };

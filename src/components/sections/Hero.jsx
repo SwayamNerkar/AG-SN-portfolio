@@ -53,6 +53,70 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/20 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
       </div>
 
+      {/* Floating Achievement Bubbles */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        className="absolute top-[10%] md:top-1/4 left-[-10%] md:left-[5%] lg:left-[10%] z-20 flex flex-col items-center pointer-events-none scale-75 md:scale-100"
+      >
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-5 py-3 rounded-full shadow-2xl"
+        >
+          <div className="w-10 h-10 rounded-full bg-primary-500/20 flex items-center justify-center text-xl">
+            🏆
+          </div>
+          <div className="text-left">
+            <p className="text-white font-bold text-sm">33+ Events</p>
+            <p className="text-slate-400 text-xs">Attended & Organized</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="absolute bottom-[20%] md:bottom-[30%] right-[-10%] md:right-[5%] lg:right-[10%] z-20 flex flex-col items-center pointer-events-none scale-75 md:scale-100"
+      >
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-5 py-3 rounded-full shadow-2xl"
+        >
+          <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-xl">
+            🚀
+          </div>
+          <div className="text-left">
+            <p className="text-white font-bold text-sm">Hackathons</p>
+            <p className="text-slate-400 text-xs">Multiple Wins</p>
+          </div>
+        </motion.div>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute top-[15%] md:top-[20%] right-[-5%] md:right-[10%] lg:right-[20%] z-20 flex flex-col items-center pointer-events-none scale-75 md:scale-100"
+      >
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-2xl"
+        >
+          <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-lg">
+            🌟
+          </div>
+          <div className="text-left">
+            <p className="text-white font-bold text-sm">Community</p>
+            <p className="text-slate-400 text-xs">Leader</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
       <div className="container relative z-10 mx-auto px-6 md:px-12 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -79,7 +143,7 @@ const Hero = () => {
             Welcome to my portfolio
           </span>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            Hi, I'm <span className="text-white">Alex</span>
+            Hi, I'm <span className="text-white">Swayam</span>
             <br />
             <span className="text-gradient min-h-[1.2em] inline-block mt-2">
               {text}

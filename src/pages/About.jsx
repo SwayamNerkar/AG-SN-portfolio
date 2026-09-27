@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import portraitImg from '../assets/iaqsa stand.jpeg';
+import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const About = () => {
   return (
@@ -71,7 +72,8 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      <ContentPlaceholder />
+    </div>
     </section>
   );
 };

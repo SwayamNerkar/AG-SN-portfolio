@@ -34,6 +34,7 @@ import axis24 from "../assets/axis'24.png";
 import makxeniaWorkshop from '../assets/makxenia.png';
 import wwdcParty from '../assets/wwdc party photos.jpg';
 import unityWorkshop from '../assets/1789098390166.jpg';
+import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const events = [
   {
@@ -529,7 +530,8 @@ const Events = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      <ContentPlaceholder />
+    </div>
     </section>
   );
 };
