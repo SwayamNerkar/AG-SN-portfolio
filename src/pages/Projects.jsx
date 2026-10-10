@@ -4,7 +4,6 @@ import { Github, ExternalLink, X } from 'lucide-react';
 import swayinImg from '../assets/swayin_predictor.png';
 import shardeumImg from '../assets/shardeum_project.png';
 import matrixImg from '../assets/matrix_portfolio.png';
-import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const projects = [
   {
@@ -305,7 +304,6 @@ const Projects = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      <ContentPlaceholder />
     </div>
     </section>
   );

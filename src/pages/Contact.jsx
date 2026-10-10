@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import ContentPlaceholder from '../components/ContentPlaceholder';
 
 // ─── EmailJS config pulled from .env ─────────────────────────────────────────
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -254,7 +253,6 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
-      <ContentPlaceholder />
     </div>
     </section>
   );

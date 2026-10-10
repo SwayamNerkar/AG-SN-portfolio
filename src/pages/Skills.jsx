@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const skillsData = [
   { group: 'Programming', items: ['React', 'TypeScript', 'Next.js', 'Node.js'] },
@@ -61,7 +60,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-      <ContentPlaceholder />
     </div>
     </section>
   );

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import riyaOfferLetter from '../assets/riyablog offer letter.png';
-import ContentPlaceholder from '../components/ContentPlaceholder';
 
 const experiences = [
   {
@@ -137,7 +136,6 @@ const Experience = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      <ContentPlaceholder />
     </div>
     </section>
   );
