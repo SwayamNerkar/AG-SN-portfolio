@@ -29,14 +29,17 @@ const fadeUp = {
 
 const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
+  const [autoScrollProgress, setAutoScrollProgress] = useState(0);
+  const [hasAutoScrolled, setHasAutoScrolled] = useState(false);
   const containerRef = useRef(null);
   const section2Ref = useRef(null);
+  const autoScrollTimerRef = useRef(null);
+  const progressIntervalRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start']
   });
-
 
   // Parallax + fade the background slightly as user scrolls
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
@@ -48,6 +51,44 @@ const Home = () => {
     }, 3000);
     return () => clearInterval(id);
   }, []);
+
+  // Auto-scroll to Section 2 after 5 seconds
+  useEffect(() => {
+    const DURATION = 5000; // 5 seconds
+    const TICK = 50;       // update every 50ms
+    let elapsed = 0;
+
+    progressIntervalRef.current = setInterval(() => {
+      elapsed += TICK;
+      setAutoScrollProgress(Math.min(elapsed / DURATION, 1));
+    }, TICK);
+
+    autoScrollTimerRef.current = setTimeout(() => {
+      if (!hasAutoScrolled && section2Ref.current) {
+        section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+        setHasAutoScrolled(true);
+        clearInterval(progressIntervalRef.current);
+      }
+    }, DURATION);
+
+    // Cancel auto-scroll if user manually scrolls
+    const cancelOnScroll = () => {
+      if (window.scrollY > 10) {
+        clearTimeout(autoScrollTimerRef.current);
+        clearInterval(progressIntervalRef.current);
+        setHasAutoScrolled(true);
+        setAutoScrollProgress(1);
+        window.removeEventListener('scroll', cancelOnScroll);
+      }
+    };
+    window.addEventListener('scroll', cancelOnScroll, { passive: true });
+
+    return () => {
+      clearTimeout(autoScrollTimerRef.current);
+      clearInterval(progressIntervalRef.current);
+      window.removeEventListener('scroll', cancelOnScroll);
+    };
+  }, [hasAutoScrolled]);
 
 
   return (
@@ -118,10 +159,10 @@ const Home = () => {
           transition={{ delay: 1.2 }}
           onClick={() => {
             if (section2Ref.current) {
-              window.scrollTo({
-                top: section2Ref.current.offsetTop,
-                behavior: 'smooth'
-              });
+              section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+              setHasAutoScrolled(true);
+              clearTimeout(autoScrollTimerRef.current);
+              clearInterval(progressIntervalRef.current);
             }
           }}
           title="Click to scroll down"
@@ -149,7 +190,8 @@ const Home = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeDasharray={`${2 * Math.PI * 15}`}
-                strokeDashoffset={0}
+                strokeDashoffset={`${2 * Math.PI * 15 * (1 - autoScrollProgress)}`}
+                style={{ transition: 'stroke-dashoffset 0.05s linear' }}
               />
               <defs>
                 <linearGradient id="scrollRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">

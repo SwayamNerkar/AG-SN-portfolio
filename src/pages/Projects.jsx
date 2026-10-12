@@ -4,10 +4,56 @@ import { Github, ExternalLink, X } from 'lucide-react';
 import swayinImg from '../assets/swayin_predictor.png';
 import shardeumImg from '../assets/shardeum_project.png';
 import matrixImg from '../assets/matrix_portfolio.png';
+import nextoraImg from '../assets/nextora_ai_agent.jpg';
+import fixflowImg from '../assets/fixflow_ai.jpg';
 
 const projects = [
   {
     id: 1,
+    title: 'Nextora: Employee Intelligence AI Agent',
+    category: 'Agentic AI / LLM / Full Stack',
+    img: nextoraImg,
+    github: 'https://github.com/SwayamNerkar/employee-management-AI-Agent.git',
+    link: 'https://github.com/SwayamNerkar/employee-management-AI-Agent.git',
+    tags: ['Agentic AI', 'Google Gemini', 'FastAPI', 'Streamlit', 'PostgreSQL', 'Docker', 'Gmail OAuth2'],
+    desc: 'Nextora is an autonomous agentic AI assistant that answers natural language questions about employees, their performance, projects, and communications. Powered by Google Gemini API, it autonomously determines intent, executes database tool calls against PostgreSQL, and synthesizes accurate, human-friendly responses.',
+    techStack: 'Python, FastAPI, Streamlit, Google Gemini (Tool Calling), PostgreSQL, Gmail API (OAuth2), Docker, Docker Compose',
+    features: [
+      'Agentic AI Reasoning & Automated Function Calling (Google Gemini)',
+      'Comprehensive Employee Analytics (performance scores, tasks, attendance, department metrics)',
+      'Gmail OAuth2 Integration for fetching & summarizing communication logs',
+      'One-click Containerized Deployment with Docker & Docker Compose',
+      'Asynchronous REST API backend powered by FastAPI',
+      'Interactive multi-page conversational web interface with Streamlit',
+      'Automated PostgreSQL schema restoration & database seeding',
+      'Secure environment configuration with .env template'
+    ],
+    impact: 'Developed as a 7th Semester Major Project showcasing practical applications of Generative AI, Tool Calling, Relational Databases, and Microservice Architectures.'
+  },
+  {
+    id: 2,
+    title: 'FixFlow AI – From Error to Understanding',
+    category: 'Developer Tools / AI / Full Stack',
+    img: fixflowImg,
+    github: 'https://github.com/SwayamNerkar/IBM-BOB-HACK-2K26.git',
+    link: 'https://github.com/SwayamNerkar/IBM-BOB-HACK-2K26.git',
+    tags: ['IBM Hackathon', 'FastAPI', 'React', 'TypeScript', 'Pydantic', 'Diff Viewer', 'AI Debugging'],
+    desc: 'FixFlow AI is an AI-powered debugging and conceptual learning assistant designed to help developers understand programming errors, explore possible fixes, and learn underlying programming concepts. Features structured error diagnosis, code diff summaries, verification guidance, and concept quizzes.',
+    techStack: 'React, TypeScript, Vite, Tailwind CSS, Python, FastAPI, Pydantic, HTTPX, pytest, IBM Bob / AI Provider Adapters',
+    features: [
+      'Structured error input (Language, error message, stack trace, code snippet)',
+      'AI-assisted diagnosis explaining likely cause from debugging context',
+      'Suggested code correction & diff summary showing exact changes',
+      'Underlying programming concept explanation & interactive learning quiz',
+      'Verification guidance suggesting test cases and independent checks',
+      'Demo provider mode for offline testing and demonstration',
+      'Security-focused design with input validation and secret-redaction logic',
+      'Server-side credentials isolation keeping provider secrets secure'
+    ],
+    impact: 'Built for IBM BOB Hackathon 2026 to revolutionize debugging education, bridging the gap between cryptic compiler error messages and deep conceptual understanding with verified safety guidelines.'
+  },
+  {
+    id: 3,
     title: 'SWAYIN Index Accuracy',
     category: 'AI / Fintech',
     img: swayinImg,
@@ -29,7 +75,7 @@ const projects = [
     impact: 'Built a real-world AI-driven financial analysis system focused on stock market forecasting and prediction accuracy enhancement using machine learning, deep learning, and time-series analysis techniques.'
   },
   {
-    id: 2,
+    id: 4,
     title: 'Shardeum Blockchain',
     category: 'Web3 / Blockchain',
     img: shardeumImg,
@@ -50,7 +96,7 @@ const projects = [
     impact: 'Built a Web3-focused blockchain project inspired by the Shardeum ecosystem to explore decentralized technologies, scalable blockchain systems, and modern frontend development practices.'
   },
   {
-    id: 3,
+    id: 5,
     title: 'Matrix Portfolio',
     category: 'Web Development / UI',
     img: matrixImg,
@@ -69,7 +115,7 @@ const projects = [
     impact: 'Demonstrated early passion for creative web development and mastery of custom CSS/JS animations through a unique themed experience.'
   },
   {
-    id: 4,
+    id: 6,
     title: 'FindMate – Smart Connection',
     category: 'Web App / Networking',
     img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&h=800&q=80',
@@ -91,7 +137,7 @@ const projects = [
     impact: 'Developed a modern networking and connection platform focused on responsive frontend development, interactive UI/UX design, and scalable web application architecture using modern web technologies.'
   },
   {
-    id: 5,
+    id: 7,
     title: 'Curriculum Scheduling System',
     category: 'College Management / Dashboard',
     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=800&q=80',
@@ -115,7 +161,7 @@ const projects = [
     impact: 'Developed a centralized college management and curriculum scheduling platform for GHRCEMN focused on improving academic workflow management, scheduling efficiency, and user experience.'
   },
   {
-    id: 6,
+    id: 8,
     title: 'The Career Company',
     category: 'Career Services / Frontend',
     img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&h=800&q=80',
