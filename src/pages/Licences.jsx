@@ -3,6 +3,16 @@ import { motion } from 'framer-motion';
 
 const licences = [
   {
+    id: 0,
+    title: 'Sebi Investor Awareness Test Exam',
+    issuer: 'SEBI (Securities and Exchange Board of India) & NISM',
+    date: 'Issued Aug 2025 · Expires Aug 2027',
+    credentialId: 'NISM20250000218759',
+    credentialUrl: 'https://www.linkedin.com/in/swayam-nerkar16/overlay/2102715606/skill-associations-details/?associationType=certifications',
+    skills: ['SEBI Regulations', 'Stock Market', 'Securities Markets', 'Investor Protection'],
+    image: '/images/sebi_nism_certificate.png',
+  },
+  {
     id: 1,
     title: 'Fundamentals of Digital Marketing',
     issuer: 'Google Digital Garage',
@@ -139,7 +149,7 @@ const Licences = () => {
               <p className="text-[#666] text-xs mb-4 uppercase tracking-wider">ID: {licence.credentialId}</p>
             )}
 
-            <div className="mt-auto pt-4 border-t border-[#1f1f1f]">
+            <div className="mt-auto pt-4 border-t border-[#1f1f1f] flex flex-col gap-3">
               <div className="flex flex-wrap gap-2">
                 {licence.skills.map((skill, i) => (
                   <span key={i} className="text-xs bg-[#1a1a1a] text-[#aaa] px-2 py-1 rounded-sm border border-[#2a2a2a]">
@@ -147,6 +157,18 @@ const Licences = () => {
                   </span>
                 ))}
               </div>
+
+              {licence.credentialUrl && (
+                <a
+                  href={licence.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center justify-between text-xs font-semibold text-white bg-white/[0.05] hover:bg-[#38bdf8] hover:text-black px-3 py-2 rounded transition-all duration-300 border border-white/10 group/btn"
+                >
+                  <span>Show Credential</span>
+                  <span className="font-mono text-sm transition-transform duration-300 group-hover/btn:translate-x-1">↗</span>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
