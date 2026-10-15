@@ -34,8 +34,20 @@ import axis24 from "../assets/axis'24.png";
 import makxeniaWorkshop from '../assets/makxenia.png';
 import wwdcParty from '../assets/wwdc party photos.jpg';
 import unityWorkshop from '../assets/1789098390166.jpg';
+import ibmBobHackDay from '../assets/ibm_bob_hackday_2026.jpg';
 
 const events = [
+  {
+    id: 37,
+    title: 'Build with IBM BOB Hack Day 2026 – AI-Assisted Full-Stack Project Developer',
+    type: 'Hackathon',
+    date: 'October 10, 2026',
+    img: ibmBobHackDay,
+    desc: 'Participated in Build with IBM BOB Hack Day, organized by IBM User Group Nagpur under Track: PS-01 — AI for Learning & Developer Productivity.\n\nDeveloped FixFlow AI, an AI-powered debugging and learning assistant designed to help developers understand programming errors and learn how to resolve them efficiently.\n\nKey Contributions:\n• Developed a React and TypeScript frontend paired with a Python FastAPI backend.\n• Built comprehensive workflows for error diagnosis, code-fix suggestions, concept explanations, and verification guidance.\n• Used IBM Bob as an AI-assisted development tool for implementation, code refinement, and testing support.\n• Focused on input validation, secret redaction, safe error handling, and responsible presentation of AI-generated suggestions.\n\nTechnologies: React, TypeScript, Vite, Tailwind CSS, Python, FastAPI, Pydantic, HTTPX, pytest.',
+    subtitle: 'IBM User Group Nagpur · Track: PS-01 — AI for Learning & Developer Productivity',
+    link: 'https://github.com/SwayamNerkar/IBM-BOB-HACK-2K26.git',
+    linkText: 'View GitHub Repository'
+  },
   {
     id: 36,
     title: 'Hands-On Unity Game Development Workshop – Instructor',

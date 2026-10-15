@@ -74,8 +74,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-sm text-slate-400 uppercase tracking-wider mb-1">Email</h4>
-                  <a href="mailto:hello@example.com" className="text-lg font-medium text-white hover:text-primary-400 transition-colors">
-                    hello@example.com
+                  <a href="mailto:swayamnerkar16@gmail.com" className="text-lg font-medium text-white hover:text-primary-400 transition-colors">
+                    swayamnerkar16@gmail.com
                   </a>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-sm text-slate-400 uppercase tracking-wider mb-1">Phone</h4>
-                  <p className="text-lg font-medium text-white">+1 (555) 123-4567</p>
+                  <p className="text-lg font-medium text-white">+91 7350782684</p>
                 </div>
               </div>
             </div>
