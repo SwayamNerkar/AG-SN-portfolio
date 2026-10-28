@@ -2,10 +2,20 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import riyaOfferLetter from '../assets/riyablog offer letter.png';
+import ruralOfferLetter from '../assets/rural games offer letter.png';
+import namrataCertificate from '../assets/namrata foundation certificate.png';
 
 const experiences = [
   {
     id: '01',
+    role: 'Freelancer & Trader/Investor',
+    company: 'Self-Employed',
+    location: 'Nagpur, India',
+    date: 'Jan 2024 - Present',
+    desc: 'Managing a diversified portfolio across F&O, Equity, and Mutual Funds with a focus on technical analysis and risk management. Simultaneously providing freelance services in AIML and modern web development.'
+  },
+  {
+    id: '02',
     role: 'Content Writer Intern',
     company: "Riya's Blogs",
     location: 'Nagpur, Maharashtra, India (Hybrid)',
@@ -14,23 +24,25 @@ const experiences = [
     certificate: riyaOfferLetter
   },
   {
-    id: '02',
-    role: 'Freelancer & Trader/Investor',
-    company: 'Self-Employed',
-    location: 'Nagpur, India',
-    date: 'Jan 2024 - Present',
-    desc: 'Managing a diversified portfolio across F&O, Equity, and Mutual Funds with a focus on technical analysis and risk management. Simultaneously providing freelance services in AIML and modern web development.'
+    id: '03',
+    role: 'Community Development & Technical Intern',
+    company: 'Namrata Foundation',
+    location: 'Nagpur, Maharashtra, India',
+    date: 'Apr 2026 - Jun 2026',
+    desc: 'Actively contributed to organizational and community development initiatives. Assisted in community outreach, supported project coordination and awareness campaigns, prepared digital documentation, and provided administrative and technical support.',
+    certificate: namrataCertificate
   },
   {
-    id: '03',
-    role: 'Software Developer Intern',
+    id: '04',
+    role: 'AI SDE Intern',
     company: 'Rural Games',
     location: 'Uttar Pradesh, India (Remote)',
     date: 'Jul 2026 - Aug 2026',
     desc: 'Worked on full‑stack web projects, contributed to game‑related tools, and collaborated with the remote team to deliver features. Gained experience in React, Node.js, and CI/CD pipelines.',
-    // No certificate image available yet
+    certificate: ruralOfferLetter
   }
 ];
+
 
 const Experience = () => {
   const [selectedExp, setSelectedExp] = useState(null);
@@ -124,7 +136,7 @@ const Experience = () => {
                     {selectedExp.certificate ? (
                       <img
                         src={selectedExp.certificate}
-                        alt="Certificate"
+                        alt={`${selectedExp.company} Certificate`}
                         className="w-full h-full object-contain"
                       />
                     ) : (
@@ -136,7 +148,7 @@ const Experience = () => {
             </motion.div>
           )}
         </AnimatePresence>
-    </div>
+      </div>
     </section>
   );
 };

@@ -6,6 +6,7 @@ import shardeumImg from '../assets/shardeum_project.png';
 import matrixImg from '../assets/matrix_portfolio.png';
 import nextoraImg from '../assets/nextora_ai_agent.jpg';
 import fixflowImg from '../assets/fixflow_ai.jpg';
+import cssImg from '../assets/curriculum_scheduling_system.png';
 
 const projects = [
   {
@@ -140,7 +141,7 @@ const projects = [
     id: 7,
     title: 'Curriculum Scheduling System',
     category: 'College Management / Dashboard',
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=800&q=80',
+    img: cssImg,
     github: 'https://github.com/SwayamNerkar/CSS',
     link: '#',
     tags: ['React.js', 'Firebase', 'Management System', 'Dashboard UI'],
